@@ -41,13 +41,13 @@ function time() {
 
 ## API
 
-#### timeoutQueue ( defaultTimeToLive [, timeoutCallback ] )
+#### timeoutQueue ( [ defaultTimeToLive ] [, timeoutCallback ] )
 
 Get an instance of a timeout queue. Values added to the queue will last for the number of milliseconds specified in the `defaultTimeToLive` parameter. If they are not pulled off the queue before the value expires then the `timeoutCallback` function will be called with the value that was added to (and expired from) the queue.
 
 **Parameters**
 
-- **timeToLive** - The default number of milliseconds that a value will live on the queue before expiring. If set to a negative number then the default time to live will be to not expire.
+- **defaultTimeToLive** - The optional default number of milliseconds that a value will live on the queue before expiring. If set to a negative number then the default time to live will be to not expire. Defaults to `-1`.
 - **timeoutCallback** - The optional callback function to call if the value added to the queue is not removed before the `timeToLive` expires.
 
 **Returns** `object` with the `next`, `push`, and `length`,
