@@ -11,7 +11,7 @@ npm install timeout-queue
 ## Usage
 
 ```js
-const timeoutQueue = require('./index');
+const timeoutQueue = require('timeout-queue');
 const start = Date.now();
 
 // items added to the queue set to persist for 500 ms before calling
@@ -58,7 +58,7 @@ Get an instance of a timeout queue. Values added to the queue will last for the 
 const timeoutQueue = require('timeout-queue');
 const queue = timeoutQueue(500, function(value) {
     console.log('Expired ' + value);
-};
+});
 ```
 
 #### #length
@@ -114,7 +114,7 @@ Add a value to a timeout queue.
 const timeoutQueue = require('timeout-queue');
 const queue = timeoutQueue(500, function(value) {
     console.log('Expired ' + value);
-};
+});
 
 queue.push('Bob');
 ```
@@ -125,7 +125,7 @@ queue.push('Bob');
 const timeoutQueue = require('timeout-queue');
 const queue = timeoutQueue(500, function(value) {
     console.log('Expired ' + value);
-};
+});
 
 queue.push('Bob', 700);
 ```
@@ -136,7 +136,7 @@ queue.push('Bob', 700);
 const timeoutQueue = require('timeout-queue');
 const queue = timeoutQueue(500, function(value) {
     console.log('Expired ' + value);
-};
+});
 
 queue.push('Bob', removed);
 
@@ -151,7 +151,7 @@ function removed(value, expired) {
 const timeoutQueue = require('timeout-queue');
 const queue = timeoutQueue(500, function(value) {
     console.log('Expired ' + value);
-};
+});
 
 queue.push('Bob', 700, removed);
 
