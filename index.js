@@ -1,1 +1,1 @@
-module.exports = require('./bin/timeout-queue');
+module.exports = require('./src/timeout-queue');
