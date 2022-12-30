@@ -26,6 +26,6 @@
   "homepage": "https://github.com/Gi60s/timeout-queue#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^6.1.4"
+    "mocha": "^10.2.0"
   }
 }
